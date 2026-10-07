@@ -1,0 +1,41 @@
+name: Convert original Reimu demo to MP4
+on:
+  push:
+    branches: [arena/efc635ba-test]
+    paths:
+      - .github/workflows/reimu-mp4.yml
+      - scripts/convert_original_demo.py
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: arena/efc635ba-test
+      - name: Install video tools
+        run: python -m pip install gdown==5.2.0 Pillow==11.3.0 imageio-ffmpeg==0.6.0
+      - name: Download original public archive
+        shell: python
+        run: |
+          from pathlib import Path
+          import gdown, hashlib
+          Path('source').mkdir(exist_ok=True)
+          p = Path('source/REMU_rig_v8.zip')
+          result = gdown.download(id='1AEGNrI8w6It__qgfXv88vXe_5isVsV1X', output=str(p), quiet=False)
+          if not result:
+              raise RuntimeError('Source download failed')
+          if hashlib.sha256(p.read_bytes()).hexdigest() != '48be50d5b056ab84093e89e54a77b383e1b04864b26a885a5c990bca5288907b':
+              raise RuntimeError('Source archive changed; inspect before conversion')
+      - name: Convert demo without implying new animation authorship
+        run: python scripts/convert_original_demo.py
+      - name: Return MP4 and verification report
+        run: |
+          git config user.name "Reimu workflow"
+          git config user.email "reimu-workflow@users.noreply.github.com"
+          git add deliverables/Reimu_ORIGINAL_DEMO.mp4 deliverables/Reimu_ORIGINAL_DEMO_CREDITS.txt reports/demo-conversion.json reports/demo-preview.png
+          git diff --cached --quiet || git commit -m "Add MP4 conversion of original Megabubu demo with explicit attribution"
+          git push origin HEAD:arena/efc635ba-test
