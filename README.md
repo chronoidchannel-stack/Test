@@ -4,11 +4,13 @@ Transfer sumber melalui GitHub berhasil; pengguna tidak perlu mengunggah ulang Z
 
 ## Unduh
 
+- **[MP4 demo asli — 5,76 detik](deliverables/Reimu_ORIGINAL_DEMO.mp4)** — contoh animasi berlari bawaan Megabubu, dikonversi dari GIF dan diulang 8 kali. **Bukan render draft sapaan baru.** [Kredit dan asal video](deliverables/Reimu_ORIGINAL_DEMO_CREDITS.txt).
+
 - **[Draft animasi Maya — ZIP](deliverables/Reimu_Greeting_DRAFT_Maya.zip)** — scene asli, tekstur, keyframe sapaan 150 frame / 30 FPS, kamera dan helper preview.
 - [Scene toon asli + tekstur — ZIP](deliverables/Reimu_native_source.zip) — tanpa backup, contoh GIF, atau scene alternatif non-toon; aset yang disertakan tetap utuh.
 - **[Petunjuk penggunaan dan batasan](docs/ANIMASI_REIMU.md).**
 
-**Ini draft Maya yang diperiksa secara struktural, belum diuji secara visual atau dirender. Belum ada MP4, render 2D baru, atau ekspor GLB.** Maya/ShaderFX diperlukan untuk mengevaluasi rig dan mempertahankan shader asli.
+**Ini draft Maya yang diperiksa secara struktural, belum diuji secara visual atau dirender. Belum ada MP4 hasil render draft ini, render 2D baru, atau ekspor GLB. MP4 demo asli yang ditautkan di atas merupakan konversi contoh GIF, bukan evaluasi scene draft.** Maya/ShaderFX diperlukan untuk mengevaluasi rig dan mempertahankan shader asli.
 
 ## Sumber dan kredit
 
