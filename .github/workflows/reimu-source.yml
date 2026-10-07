@@ -48,6 +48,8 @@ jobs:
           (report / 'source-notes.txt').write_text('\n\n'.join(notes) or 'No README/license-named document found in ZIP. This does not imply permission for redistribution.')
       - name: Inspect Maya rig and documentation
         run: python scripts/inspect_reimu.py
+      - name: Package original scene without redundant backups
+        run: python scripts/package_reimu.py
       - name: Store temporary source artifact
         uses: actions/upload-artifact@v4
         with:
@@ -60,6 +62,6 @@ jobs:
         run: |
           git config user.name "Reimu workflow"
           git config user.email "reimu-workflow@users.noreply.github.com"
-          git add reports/
+          git add reports/ deliverables/
           git diff --cached --quiet || git commit -m "Record source archive inspection"
           git push origin HEAD:arena/efc635ba-test
