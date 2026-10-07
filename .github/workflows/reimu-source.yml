@@ -1,0 +1,46 @@
+name: Prepare Reimu source
+on:
+  push:
+    branches: [arena/efc635ba-test]
+    paths: [.github/workflows/reimu-source.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Install downloader
+        run: python -m pip install gdown==5.2.0
+      - name: Download public source and inspect archive
+        shell: python
+        run: |
+          import gdown, pathlib, zipfile, hashlib, json
+          root = pathlib.Path('source')
+          root.mkdir()
+          path = root / 'REMU_rig_v8.zip'
+          result = gdown.download(id='1AEGNrI8w6It__qgfXv88vXe_5isVsV1X', output=str(path), quiet=False)
+          if not result or not zipfile.is_zipfile(path):
+              raise RuntimeError('Public Drive download did not return a ZIP')
+          with zipfile.ZipFile(path) as archive:
+              entries = [{'name': i.filename, 'bytes': i.file_size} for i in archive.infolist()]
+              for item in entries:
+                  print(json.dumps(item))
+              if archive.testzip() is not None:
+                  raise RuntimeError('Archive CRC verification failed')
+              for i in archive.infolist():
+                  if i.file_size < 100000 and any(w in i.filename.lower() for w in ['readme', 'license', 'licence', 'terms']):
+                      print('DOCUMENT:', i.filename)
+                      print(archive.read(i).decode('utf-8', errors='replace'))
+          digest = hashlib.sha256(path.read_bytes()).hexdigest()
+          (root / 'manifest.json').write_text(json.dumps({'sha256': digest, 'files': entries}, indent=2))
+          print('SHA256:', digest)
+      - name: Store temporary source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: reimu-source
+          path: source/
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
