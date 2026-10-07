@@ -10,6 +10,7 @@ from PIL import Image, ImageSequence
 import imageio_ffmpeg
 
 SOURCE_MEMBER = 'Info/ANIM_Megabubu.gif'
+LOOP_COUNT = 8
 root = Path(__file__).resolve().parents[1]
 source = root/'source'
 out = root/'deliverables'
@@ -29,8 +30,9 @@ with Image.open(gif) as image:
     image.convert('RGB').save(report/'demo-preview.png')
 video = out/'Reimu_ORIGINAL_DEMO.mp4'
 ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
-# Explicitly do NOT loop the source forever; preserve one original animation cycle.
-command = [ffmpeg, '-hide_banner', '-y', '-ignore_loop', '1', '-i', str(gif),
+# Repeat exactly eight original cycles for a watchable 5.76-second demo.
+# This is repetition, NOT newly authored motion or a retimed source.
+command = [ffmpeg, '-hide_banner', '-y', '-stream_loop', str(LOOP_COUNT-1), '-ignore_loop', '1', '-i', str(gif),
            '-an', '-vf', 'pad=ceil(iw/2)*2:ceil(ih/2)*2',
            '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p',
            '-fps_mode', 'vfr', '-movflags', '+faststart',
@@ -48,7 +50,8 @@ info = next(metadata)
 metadata.close()
 frame_count, decoded_duration = imageio_ffmpeg.count_frames_and_secs(str(video))
 assert video.stat().st_size > 1000
-assert abs(decoded_duration-duration) < .15, (decoded_duration, duration)
+assert abs(decoded_duration-duration*LOOP_COUNT) < .15, (decoded_duration, duration*LOOP_COUNT)
+assert frame_count == frames*LOOP_COUNT
 assert frame_count > 1
 credits = '''REIMU — ORIGINAL DEMO / KONVERSI MP4
 
@@ -60,7 +63,8 @@ https://gumroad.com/megabubu
 Karakter Reimu Hakurei / Touhou Project: ZUN / Team Shanghai Alice.
 
 Pekerjaan pada file ini: konversi GIF menjadi MP4 H.264 yang kompatibel dengan
-pemutar video umum. Satu siklus animasi asli, tanpa audio dan tanpa upscaling.
+pemutar video umum. Delapan pengulangan siklus asli (5,76 detik), tanpa audio
+dan tanpa upscaling. Pengulangan bukan gerakan baru.
 Padding maksimal satu piksel ditambahkan bila dimensi GIF ganjil.
 
 PENTING: Ini bukan animasi baru buatan asisten, bukan render draft greeting
@@ -78,7 +82,7 @@ sebagai karya sendiri. Lihat reports/source-readme.txt untuk petunjuk asli.
     'is_greeting_draft_render': False,
     'source_sha256': hashlib.sha256(data).hexdigest(),
     'source_dimensions': [width,height], 'source_frames': frames,
-    'source_duration_seconds': duration,
+    'source_duration_seconds': duration, 'loop_count': LOOP_COUNT,
     'output_dimensions': list(info['size']), 'output_codec': info['codec'],
     'output_frames': frame_count, 'output_duration_seconds': decoded_duration,
     'output_bytes': video.stat().st_size,
