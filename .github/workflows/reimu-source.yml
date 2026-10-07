@@ -46,6 +46,8 @@ jobs:
           report.mkdir(exist_ok=True)
           (report / 'source-manifest.json').write_text((root / 'manifest.json').read_text())
           (report / 'source-notes.txt').write_text('\n\n'.join(notes) or 'No README/license-named document found in ZIP. This does not imply permission for redistribution.')
+      - name: Inspect Maya rig and documentation
+        run: python scripts/inspect_reimu.py
       - name: Store temporary source artifact
         uses: actions/upload-artifact@v4
         with:
