@@ -1,0 +1,106 @@
+{
+  "bytes": 39888240,
+  "sha256": "32eff63ddf66f2315e28d641288181f566e7663347b55925b82e5bef21ba4149",
+  "files": [
+    {
+      "file": "CellSlice_clothA_tex.png",
+      "bytes": 3033,
+      "sha256": "89b279b6a9fd5635bc336cacae503dfb2aaa946d6be3e5caa19b88988fe53e7e"
+    },
+    {
+      "file": "CellSlice_clothB_tex.png",
+      "bytes": 3021,
+      "sha256": "36054c35b1338e4ec3742750893b7e9d137f114d5004f4ffb1c5d6170af163ae"
+    },
+    {
+      "file": "CellSlice_clothC_tex.png",
+      "bytes": 3024,
+      "sha256": "84ab3fa78a07517ec5516cfe903584f52633d674cc67130d5748e24a331c3475"
+    },
+    {
+      "file": "CellSlice_hair_tex.png",
+      "bytes": 3045,
+      "sha256": "d09e81f3dd854fd4827de085798cb77b4f10fcfbd44cd3cd74f5219554cad225"
+    },
+    {
+      "file": "CellSlice_skin_tex.png",
+      "bytes": 3009,
+      "sha256": "97ab49c5209148aefeb8503bd0c18a0fa06f23c113063df6935acdb6980e0793"
+    },
+    {
+      "file": "EmotePatch_alpha.png",
+      "bytes": 578870,
+      "sha256": "af9781acef838b59988d0ba34802ecc2307cdd608ce45b953a1259107d961e79"
+    },
+    {
+      "file": "EmotePatch_diffuse.png",
+      "bytes": 240286,
+      "sha256": "f06d64400f93a8924e7c60ff808e2a2db403c95f482b1332109cb3b9c21b70b2"
+    },
+    {
+      "file": "hatch_01_tex.png",
+      "bytes": 9854,
+      "sha256": "3ebd107d3f49043bd034420ec68f8c814cbe6ad2f70e412b0d73693438d502e2"
+    },
+    {
+      "file": "hatch_02_tex.png",
+      "bytes": 478380,
+      "sha256": "56fbd08aef893c3d984d0e06576b2367321b05909c351793e0f892005fa1ee2e"
+    },
+    {
+      "file": "hatch_03_tex.png",
+      "bytes": 132466,
+      "sha256": "af43417aa4a6dbd01b1e4f7e65fa72c0ebced78e8a5dfdd901a1c822a786360c"
+    },
+    {
+      "file": "prop_diffuse_tex.tga",
+      "bytes": 3145772,
+      "sha256": "f0c85c5015c2f461450c720b50581fe4d4cd89768ddbe70d6197ad7f1a132808"
+    },
+    {
+      "file": "reimuCasual_diffuse_tex.tga",
+      "bytes": 50331692,
+      "sha256": "af79ae3d482c69fca472b2c9007dce3bafa8225c37c370e237e7b31cffd825fd"
+    },
+    {
+      "file": "reimuCasual_diffuse_tex.tx",
+      "bytes": 762168,
+      "sha256": "ee7490fa212fbf7afd6127cdd5787508ecd438b50a73bbf8a9d5b61f30c35ec5"
+    },
+    {
+      "file": "reimu_diffuse_tex.tga",
+      "bytes": 50331692,
+      "sha256": "8a07b904e6f08306800b526a01ced270f2521a2e028a207fc762a0c29031782d"
+    },
+    {
+      "file": "reimu_diffuse_tex.tx",
+      "bytes": 948486,
+      "sha256": "3e3ff85c35e4a7fbfdf08edc17730d79b2482aa24f123f2e5117969c595f8a12"
+    },
+    {
+      "file": "Reimu_Rig_master.ma",
+      "bytes": 103917656,
+      "sha256": "64c016ee46b375059ef1c91a3f29a45754dc368e5f6e12c0f9d2f906bdf2d0c5"
+    },
+    {
+      "file": "REMU_hairhighlight.tga",
+      "bytes": 50331692,
+      "sha256": "c16cc639324c15671d0fe92f98cea9ccdf588080707ca66cac318103eadef6de"
+    },
+    {
+      "file": "REMU_hairhighlight.tx",
+      "bytes": 3130935,
+      "sha256": "7ed2f15e359fac7d47858b95c9e7ae72bfbdb3a1f297c7af165fc8f641020c2e"
+    },
+    {
+      "file": "screentone_dotA_tex.png",
+      "bytes": 932283,
+      "sha256": "69360d1f28550725e2abef984147749a14c761ddd6f68bf8c6ef9d2c17db1546"
+    },
+    {
+      "file": "screentone_dotB_tex.png",
+      "bytes": 1496748,
+      "sha256": "abc0bd4dbcbd3a9dbc8f85ff6cabbc76b8329d80f007213f9106770e1cb19701"
+    }
+  ]
+}
