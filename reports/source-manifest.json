@@ -1,0 +1,201 @@
+{
+  "sha256": "48be50d5b056ab84093e89e54a77b383e1b04864b26a885a5c990bca5288907b",
+  "files": [
+    {
+      "name": "Info/",
+      "bytes": 0
+    },
+    {
+      "name": "Info/ANIM_Megabubu.gif",
+      "bytes": 782276
+    },
+    {
+      "name": "Info/Anim_Mochi_01.gif",
+      "bytes": 12558423
+    },
+    {
+      "name": "Info/ANIM_PrattBros_02.gif",
+      "bytes": 2140422
+    },
+    {
+      "name": "Info/ReimuSanae Rig Readme.docx",
+      "bytes": 8184546
+    },
+    {
+      "name": "Info/Reimu_01_Expressionsjpg.jpg",
+      "bytes": 1893381
+    },
+    {
+      "name": "Info/Reimu_01_Pose.jpg",
+      "bytes": 1716671
+    },
+    {
+      "name": "Info/Reimu_anim_run_v006.gif",
+      "bytes": 1010675
+    },
+    {
+      "name": "Info/Reimu_Picker_01.jpg",
+      "bytes": 459896
+    },
+    {
+      "name": "Info/Reimu_Thumb_02.jpg",
+      "bytes": 1080507
+    },
+    {
+      "name": "Info/REMU_hairHighlight.jpg",
+      "bytes": 255895
+    },
+    {
+      "name": "Info/REMU_squash and stretch.jpg",
+      "bytes": 295859
+    },
+    {
+      "name": "v008/",
+      "bytes": 0
+    },
+    {
+      "name": "v008/.mayaSwatches/",
+      "bytes": 0
+    },
+    {
+      "name": "v008/.mayaSwatches/EmotePatch_alpha.png_hcm.swatch",
+      "bytes": 6112
+    },
+    {
+      "name": "v008/.mayaSwatches/EmotePatch_diffuse.png_hcm.swatch",
+      "bytes": 4028
+    },
+    {
+      "name": "v008/.mayaSwatches/prop_diffuse_tex.tga_hcm.swatch",
+      "bytes": 3668
+    },
+    {
+      "name": "v008/CellSlice_clothA_tex.png",
+      "bytes": 3033
+    },
+    {
+      "name": "v008/CellSlice_clothB_tex.png",
+      "bytes": 3021
+    },
+    {
+      "name": "v008/CellSlice_clothC_tex.png",
+      "bytes": 3024
+    },
+    {
+      "name": "v008/CellSlice_hair_tex.png",
+      "bytes": 3045
+    },
+    {
+      "name": "v008/CellSlice_skin_tex.png",
+      "bytes": 3009
+    },
+    {
+      "name": "v008/EmotePatch_alpha.png",
+      "bytes": 578870
+    },
+    {
+      "name": "v008/EmotePatch_diffuse.png",
+      "bytes": 240286
+    },
+    {
+      "name": "v008/hatch_01_tex.png",
+      "bytes": 9854
+    },
+    {
+      "name": "v008/hatch_02_tex.png",
+      "bytes": 478380
+    },
+    {
+      "name": "v008/hatch_03_tex.png",
+      "bytes": 132466
+    },
+    {
+      "name": "v008/incrementalSave/",
+      "bytes": 0
+    },
+    {
+      "name": "v008/incrementalSave/Reimu_Rig_master.ma/",
+      "bytes": 0
+    },
+    {
+      "name": "v008/incrementalSave/Reimu_Rig_master.ma/Reimu_Rig_master.0001.ma",
+      "bytes": 143252108
+    },
+    {
+      "name": "v008/incrementalSave/Reimu_Rig_master_nonToon.ma/",
+      "bytes": 0
+    },
+    {
+      "name": "v008/incrementalSave/Reimu_Rig_master_nonToon.ma/Reimu_Rig_master_nonToon.0001.ma",
+      "bytes": 141415045
+    },
+    {
+      "name": "v008/Picker/",
+      "bytes": 0
+    },
+    {
+      "name": "v008/Picker/Reimu_Picker_Body_Bkgr.png",
+      "bytes": 165250
+    },
+    {
+      "name": "v008/Picker/Reimu_Picker_Body_v3.pkr",
+      "bytes": 254024
+    },
+    {
+      "name": "v008/Picker/Reimu_Picker_Face_Bkgr.png",
+      "bytes": 92209
+    },
+    {
+      "name": "v008/Picker/Reimu_Picker_Face_v3.pkr",
+      "bytes": 152900
+    },
+    {
+      "name": "v008/prop_diffuse_tex.tga",
+      "bytes": 3145772
+    },
+    {
+      "name": "v008/reimuCasual_diffuse_tex.tga",
+      "bytes": 50331692
+    },
+    {
+      "name": "v008/reimuCasual_diffuse_tex.tx",
+      "bytes": 762168
+    },
+    {
+      "name": "v008/reimu_diffuse_tex.tga",
+      "bytes": 50331692
+    },
+    {
+      "name": "v008/reimu_diffuse_tex.tx",
+      "bytes": 948486
+    },
+    {
+      "name": "v008/Reimu_Rig_master.ma",
+      "bytes": 103917656
+    },
+    {
+      "name": "v008/Reimu_Rig_master_nonToon.ma",
+      "bytes": 102080278
+    },
+    {
+      "name": "v008/REMU_hairhighlight.tga",
+      "bytes": 50331692
+    },
+    {
+      "name": "v008/REMU_hairhighlight.tx",
+      "bytes": 3130935
+    },
+    {
+      "name": "v008/screentone_dotA_tex.png",
+      "bytes": 932283
+    },
+    {
+      "name": "v008/screentone_dotB_tex.png",
+      "bytes": 1496748
+    },
+    {
+      "name": "v008/update note.txt",
+      "bytes": 144
+    }
+  ]
+}
