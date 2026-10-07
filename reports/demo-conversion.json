@@ -1,0 +1,25 @@
+{
+  "provenance": "Info/ANIM_Megabubu.gif",
+  "is_new_animation": false,
+  "is_greeting_draft_render": false,
+  "source_sha256": "10765e7788d86d4427c31c187b12f68e7083d5b301d7bf52a11c55d71c84d850",
+  "source_dimensions": [
+    800,
+    800
+  ],
+  "source_frames": 24,
+  "source_duration_seconds": 0.72,
+  "output_dimensions": [
+    800,
+    800
+  ],
+  "output_codec": "h264",
+  "output_frames": 24,
+  "output_duration_seconds": 0.72,
+  "output_bytes": 312283,
+  "output_sha256": "e2ac2607314425dd07f2cd4a2b0b3868e47ad68d69db11a9f600bb62b6c695fd",
+  "complete_decode_passed": true,
+  "audio": false,
+  "credit": "Megabubu \u2014 https://gumroad.com/megabubu",
+  "usage": "Non-commercial use with attribution, per original README"
+}
