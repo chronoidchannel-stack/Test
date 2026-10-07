@@ -8,7 +8,8 @@ https://gumroad.com/megabubu
 Karakter Reimu Hakurei / Touhou Project: ZUN / Team Shanghai Alice.
 
 Pekerjaan pada file ini: konversi GIF menjadi MP4 H.264 yang kompatibel dengan
-pemutar video umum. Satu siklus animasi asli, tanpa audio dan tanpa upscaling.
+pemutar video umum. Delapan pengulangan siklus asli (5,76 detik), tanpa audio
+dan tanpa upscaling. Pengulangan bukan gerakan baru.
 Padding maksimal satu piksel ditambahkan bila dimensi GIF ganjil.
 
 PENTING: Ini bukan animasi baru buatan asisten, bukan render draft greeting
