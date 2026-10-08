@@ -1,0 +1,101 @@
+{
+  "status": "NEW_RENDERS_AND_NEW_ANIMATION_COMPLETE",
+  "uses_demo_media": false,
+  "original_asset": "Reimu_native_source.zip / Reimu_Rig_master.ma",
+  "source_scene_sha256": "64c016ee46b375059ef1c91a3f29a45754dc368e5f6e12c0f9d2f906bdf2d0c5",
+  "renderer": "Blender 4.2 / Cycles CPU",
+  "geometry": "Original mesh positions, face topology and UVs; source skin weights; new simplified deformations.",
+  "materials": "Original diffuse texture; adapted two-tone shader, not a ShaderFX-equivalent renderer.",
+  "original_mesh_parts": 13,
+  "base_vertices": 31222,
+  "base_polygons": 31332,
+  "images": [
+    {
+      "file": "images/01_default_front.png",
+      "label": "Default · Depan",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "6962bb057561a67009b773394ac9dbb6ffbf803f6070943d457bc999b228dd9a"
+    },
+    {
+      "file": "images/02_default_back.png",
+      "label": "Default · Belakang",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "24abf88bb74f973a28901c573fc5d3b2adceab9e6e570769e409c9668fd80426"
+    },
+    {
+      "file": "images/03_wave.png",
+      "label": "Melambai",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "dccec6ef8fc41d54602472af427159c6862d058d0d6ac3f46f2449d3b7f49983"
+    },
+    {
+      "file": "images/04_peace.png",
+      "label": "Peace!",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "5b105350d4df6dbe26938e6d61c08e9a89c22fd09e23ab3c58ca88a0c873dc79"
+    },
+    {
+      "file": "images/05_cheeks.png",
+      "label": "Pipi imut",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "d5ac39205c0b1ea5744e612ca90e60f5abc8e7dbe39b484872f6376c007d99af"
+    },
+    {
+      "file": "images/06_heart.png",
+      "label": "Hati kecil",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "71085b790426f8e62fc2be727d69b97f0fe850d576e54c46afbd056592949fc6"
+    },
+    {
+      "file": "images/07_shy.png",
+      "label": "Malu-malu",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a44b10a3e3eff5d86c6f86c5a699143f4d69e215550af1c6527dc43459d58557"
+    },
+    {
+      "file": "images/08_bow.png",
+      "label": "Membungkuk",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "fdbf7faec95b6cf5b5eb530fae71be77abfec3b665dccea98c5d7d9a0577f202"
+    },
+    {
+      "file": "images/09_tiptoe.png",
+      "label": "Berjinjit",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "2dc8e006dee452db2248df8d21c77645556b4bc39b889dc2a2cd9ef1df52fec2"
+    },
+    {
+      "file": "images/10_cheer.png",
+      "label": "Ceria",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "630d81ba5826c2c9b86db3ba244edcc82c0432d3e9e6d94e41e369539bfce821"
+    }
+  ],
+  "animation": {
+    "file": "Reimu_Animasi_Baru.mp4",
+    "width": 720,
+    "height": 720,
+    "fps": 24,
+    "frames": 144,
+    "seconds": 6.0,
+    "audio": false,
+    "sha256": "3082ed5e946f897335005f3b18183984cf34b138a2a37b764e1e9c913490400b",
+    "full_decode_passed": true
+  },
+  "motion": "New six-second greeting: anticipation, raise left hand, three wrist waves, head/torso movement, settle. Not the previous untested Maya draft and not a reused clip.",
+  "limitations": [
+    "Maya constraint graph, facial rig, cloth collision and ShaderFX are not evaluated.",
+    "Visual equivalence to the supplied reference is not claimed to be 100%."
+  ],
+  "attribution": "Original model/rig: Megabubu; character: ZUN / Team Shanghai Alice. Non-commercial with credit per creator README."
+}

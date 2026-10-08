@@ -1,0 +1,6 @@
+# Tested with Python 3.11; bpy requires compatible native runtime libraries.
+bpy==4.2.0
+numpy==2.4.6
+scipy==1.17.1
+Pillow==12.3.0
+imageio-ffmpeg==0.6.0
