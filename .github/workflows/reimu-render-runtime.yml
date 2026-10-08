@@ -1,0 +1,31 @@
+name: Prepare render runtime libraries
+on:
+  push:
+    branches: [arena/efc635ba-test]
+    paths: [.github/workflows/reimu-render-runtime.yml]
+permissions:
+  contents: write
+jobs:
+  runtime:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: arena/efc635ba-test
+      - name: Install standard Blender runtime dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libxrender1 libxxf86vm1 libxfixes3 libxi6 libxkbcommon0 libsm6 libice6 libgl1 libglx0 libglvnd0
+          mkdir -p /tmp/render-libs render-tools
+          for name in libXrender.so.1 libXxf86vm.so.1 libXfixes.so.3 libXi.so.6 libxkbcommon.so.0 libSM.so.6 libICE.so.6 libGL.so.1 libGLX.so.0 libGLdispatch.so.0 libbsd.so.0 libmd.so.0; do
+            cp -L /usr/lib/x86_64-linux-gnu/$name /tmp/render-libs/
+          done
+          tar -czf render-tools/runtime-libs.tar.gz -C /tmp/render-libs .
+      - name: Return runtime archive on session branch
+        run: |
+          git config user.name "Reimu workflow"
+          git config user.email "reimu-workflow@users.noreply.github.com"
+          git add render-tools/runtime-libs.tar.gz
+          git commit -m "Prepare standard runtime dependencies for original renders"
+          git push origin HEAD:arena/efc635ba-test
